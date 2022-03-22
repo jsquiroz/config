@@ -37,3 +37,4 @@ nmap <Leader>nt :NERDTreeToggle<cr>
 
 let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 1
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
