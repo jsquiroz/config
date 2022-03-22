@@ -1,5 +1,5 @@
-set nocompatible 
-set history=1000 
+set nocompatible
+set history=1000
 
 
 " Installs vim-plug
@@ -11,11 +11,13 @@ end
 " vim-plug plugins
 call plug#begin("~/.config/nvim/plugged/")
 source $HOME/.config/nvim/plugins.vim
+
 call plug#end()
+
 
 set noswapfile
 set nobackup
-color smyck
+
 set showmode
 set laststatus=2
 set wildmenu
@@ -25,6 +27,12 @@ set relativenumber
 set cursorline
 set colorcolumn=80
 set cursorcolumn
+set termguicolors
+color smyck
+
+set fillchars+=vert:\┊
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
 
 let mapleader=","
 
