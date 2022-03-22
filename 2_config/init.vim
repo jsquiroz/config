@@ -15,7 +15,7 @@ call plug#end()
 
 set noswapfile
 set nobackup
-
+color smyck
 set showmode
 set laststatus=2
 set wildmenu
