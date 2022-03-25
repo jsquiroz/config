@@ -42,7 +42,19 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 nmap <Leader>nt :NERDTreeToggle<cr>
+nmap <Leader>gt :GitGutterLineHighlightsToggle<cr>
 
 let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 1
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+
+set updatetime=100
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '>'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_removed_first_line = '^'
+let g:gitgutter_sign_modified_removed = '<'
+
+let g:gitgutter_override_sign_column_highlight = 1
+highlight SignColumn guibg=NONE
+highlight SignColumn ctermbg=NONE

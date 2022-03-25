@@ -12,3 +12,4 @@ Plug 'prettier/vim-prettier', {
 Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 Plug 'kevinoid/vim-jsonc'
 Plug 'pangloss/vim-javascript'
+Plug 'airblade/vim-gitgutter'
