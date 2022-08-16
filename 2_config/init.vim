@@ -1,7 +1,6 @@
 set nocompatible
 set history=1000
 
-
 " Installs vim-plug
 if empty(glob("~/.config/nvim/autoload/plug.vim"))
     silent !curl -fLso ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -43,10 +42,12 @@ map <C-l> <C-w>l
 
 nmap <Leader>nt :NERDTreeToggle<cr>
 nmap <Leader>gt :GitGutterLineHighlightsToggle<cr>
+inoremap <silent><expr> <c-space> coc#refresh()
+
 
 let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 1
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+"autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
 set updatetime=100
 let g:gitgutter_sign_added = '+'
@@ -58,3 +59,10 @@ let g:gitgutter_sign_modified_removed = '<'
 let g:gitgutter_override_sign_column_highlight = 1
 highlight SignColumn guibg=NONE
 highlight SignColumn ctermbg=NONE
+let NERDTreeShowHidden=1
+
+let g:airline#extensions#tabline#enabled = 1
+
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+
