@@ -27,7 +27,7 @@ set cursorline
 set colorcolumn=80
 set cursorcolumn
 set termguicolors
-color smyck
+colorscheme dracula
 
 set fillchars+=vert:\┊
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -43,7 +43,16 @@ map <C-l> <C-w>l
 nmap <Leader>nt :NERDTreeToggle<cr>
 nmap <Leader>gt :GitGutterLineHighlightsToggle<cr>
 inoremap <silent><expr> <c-space> coc#refresh()
-
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                            \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+set hidden
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-P> :bprev<CR>
 
 let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 1
