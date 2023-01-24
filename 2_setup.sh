@@ -29,6 +29,3 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -Sy archlinux-keyring && pacman -Su
 pacman -S openssh zsh kitty xorg xf86-video-intel gnome gnome-extra gnome-tweak-tool gdm gnome-shell-extensions
 systemctl enable gdm
-exit
-umount -R /mnt
-shutdown -r now
