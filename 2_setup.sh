@@ -13,7 +13,7 @@ passwd $username
 usermod -aG wheel $username
 pacman -S sudo neovim lvm2 grub
 
-echo 'wheel ALL=(ALL:ALL)' | sudo EDITOR="tee -a" visudo
+echo "wheel ALL=(ALL:ALL)" | sudo EDITOR="tee -a" visudo
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 echo "127.0.0.1 localhost" > /etc/hosts
