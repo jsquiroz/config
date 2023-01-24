@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Set root password'
+echo "Set root password"
 passwd
 
 echo "Create a new user"
