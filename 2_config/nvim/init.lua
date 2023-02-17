@@ -1,5 +1,5 @@
 -- setings
-vim.g.mapleader = ','
+vim.g.mapleader = ' '
 
 vim.opt.mouse = 'a'
 vim.opt.number = true
@@ -378,7 +378,7 @@ function go_org_imports(wait_ms)
 end
 
 vim.cmd [[autocmd BufWritePre *.go lua go_org_imports()]]
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
 
 -- theme
@@ -386,3 +386,8 @@ vim.cmd([[highlight ExtraWhitespace ctermbg=red guibg=red]])
 vim.cmd([[match ExtraWhitespace /\s\+$/]])
 
 vim.cmd.colorscheme "catppuccin"
+
+vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
